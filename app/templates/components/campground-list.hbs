@@ -1,0 +1,9 @@
+<ul>
+  {{#each this.list as |campground|}}
+    {{#link-to 'detail'}}
+      <li>{{campground}}</li>
+    {{/link-to}}
+  {{/each}}
+</ul>
+
+{{yield}}
