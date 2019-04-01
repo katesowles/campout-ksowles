@@ -4,6 +4,10 @@
       <li>{{campground.name}}</li>
     {{/link-to}}
   {{/each}}
+
+  {{#link-to "add"}}
+    <li>Add New Campground</li>
+  {{/link-to}}
 </ul>
 
 {{yield}}
