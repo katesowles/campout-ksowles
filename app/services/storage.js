@@ -10,61 +10,61 @@ export default Service.extend({
     // looks like the proper way to do this is with Mirage?
     this.set('starters', [
       {
-        "id": "beaver-bay",
+        "id": 1,
         "name": "Beaver Bay Campground",
         "city": "Cougar",
         "state": "WA"
       },
       {
-        "id": "cape-lookout",
+        "id": 2,
         "name": "Cape Lookout State Park",
         "city": "Tillamook",
         "state": "OR"
       },
       {
-        "id": "cove-palisades",
+        "id": 3,
         "name": "Cove Palisades State Park",
         "city": "Culver",
         "state": "OR"
       },
       {
-        "id": "crescent-lake",
+        "id": 4,
         "name": "Crescent Lake Campground",
         "city": "Crescent",
         "state": "OR"
       },
       {
-        "id": "deschutes-river",
+        "id": 5,
         "name": "Deschutes River State Recreation Area",
         "city": "Wasco",
         "state": "OR"
       },
       {
-        "id": "detroit-lake",
+        "id": 6,
         "name": "Detroit Lake State Recreation Area",
         "city": "Detroit",
         "state": "OR"
       },
       {
-        "id": "devils-lake",
+        "id": 7,
         "name": "Devil's Lake State Recreation Area",
         "city": "Lincoln City",
         "state": "OR"
       },
       {
-        "id": "fort-stevens",
+        "id": 8,
         "name": "Fort Stevens State Park",
         "city": "Hammond",
         "state": "OR"
       },
       {
-        "id": "south-beach",
+        "id": 9,
         "name": "South Beach State Park",
         "city": "Newport",
         "state": "OR"
       },
       {
-        "id": "timothy-lake",
+        "id": 10,
         "name": "Timothy Lake Campground",
         "city": "Clackamas County",
         "state": "OR"
