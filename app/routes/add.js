@@ -8,6 +8,11 @@ export default Route.extend({
   model () {
     return {
       list: this.storageSvc.items,
+      campground: {
+        name: '',
+        city: '',
+        state: '',
+      }
     }
   }
 });
