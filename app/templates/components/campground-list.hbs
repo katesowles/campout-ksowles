@@ -1,7 +1,7 @@
 <ul>
   {{#each this.list as |campground|}}
-    {{#link-to 'detail'}}
-      <li>{{campground}}</li>
+    {{#link-to "detail" campground.id}}
+      <li>{{campground.name}}</li>
     {{/link-to}}
   {{/each}}
 </ul>
