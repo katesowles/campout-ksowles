@@ -1,13 +1,18 @@
 <ul>
-  {{#each this.list as |campground|}}
-    {{#link-to "detail" campground.id}}
-      <li>{{campground.name}}</li>
-    {{/link-to}}
+  {{#each list as |campground|}}
+    <li>
+      {{#side-menu-link-to "detail" campground.id}}
+        {{campground.name}}
+      {{/side-menu-link-to}}
+    </li>
   {{/each}}
 
-  {{#link-to "add"}}
-    <li>Add New Campground</li>
-  {{/link-to}}
+  <li>
+    {{#side-menu-link-to "add"}}
+      {{fa-icon "plus-square"}}
+      {{buttonText}}
+    {{/side-menu-link-to}}
+  </li>
 </ul>
 
 {{yield}}
