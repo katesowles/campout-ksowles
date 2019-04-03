@@ -1,18 +1,10 @@
-<h2>Add New Campground</h2>
+<h2>{{headerTitle}}</h2>
 
-<div>
-  <label for="name">Campground Name</label>
-  <input type="text" name="name" value="" placeholder="Silver Falls State Park">
-</div>
-
-<div>
-  <label for="">City</label>
-  <input type="text" name="city" value="" placeholder="Sublimity">
-</div>
-
-<div>
-  <label for="">State</label>
-  <input type="text" name="state" value="" placeholder="OR">
-</div>
+{{#bs-form formLayout=formLayout model=this.model.campground onSubmit=(action "submitCreate" this.model.campground) as |form|}}
+  {{form.element controlType="text" value="" label=nameLabel placeholder="Silver Falls State Park" property="text" required=true}}
+  {{form.element controlType="text" value="" label=cityLabel placeholder="Sublimity" property="text" required=true }}
+  {{form.element controlType="text" value="" label=stateLabel placeholder="OR" property="text" required=true}}
+  {{bs-button defaultText=buttonText type="primary" buttonType="submit"}}
+{{/bs-form}}
 
 {{yield}}
