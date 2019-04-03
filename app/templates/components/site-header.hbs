@@ -1,0 +1,16 @@
+{{#bs-nav type=type justified=justified stacked=stacked fill=fill as |nav|}}
+  {{#nav.item}}
+    {{#side-menu-toggle}}
+      {{fa-icon "bars"}}
+    {{/side-menu-toggle}}
+  {{/nav.item}}
+
+  {{#nav.item}}
+    {{#nav.link-to "index"}}
+      {{fa-icon "campground"}}
+      {{headerTitle}}
+    {{/nav.link-to}}
+  {{/nav.item}}
+{{/bs-nav}}
+
+{{yield}}
