@@ -1,5 +1,11 @@
-<CampgroundList @list={{this.model.list}} />
+<SiteHeader @headerTitle="List O' Campgrounds" />
 
-<CampgroundAdd @campground={{this.model.campground}} />
+<Sidebar @list={{this.model.list}} @sidebarHeader="Menu"/>
+
+{{!-- NOTE: bring back when Add is a modal, figure out the data store so that I don't have to pass active detail data into the Add component! <CampgroundDetail @campground={{this.model.detail}} @join=", " /> --}}
+
+{{!-- NOTE: The above solution is GROSS, I totally know this. BUT I can't seem to get the nested routing/outlet thingamajigger working. This is a research task for Future Kate. --}}
+
+<CampgroundAdd @campground={{this.model.campground}} @headerTitle="Add New Campground" @nameLabel="Name" @cityLabel="City" @stateLabel="State" @buttonText="Submit" />
 
 {{outlet}}
