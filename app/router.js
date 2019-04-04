@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('campgrounds', () => {
       this.route('detail', { path: 'campgrounds/:campground_id' });
   });
-  this.route('add');
+  this.route('add', { path: 'campgrounds/add' });
 });
 
 export default Router;
