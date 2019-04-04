@@ -1,4 +1,4 @@
-<ul>
+<ul class="list">
   {{#each list as |campground|}}
     <li>
       {{#side-menu-link-to "detail" campground.id}}
@@ -6,13 +6,6 @@
       {{/side-menu-link-to}}
     </li>
   {{/each}}
-
-  <li>
-    {{#side-menu-link-to "add"}}
-      {{fa-icon "plus-square"}}
-      {{buttonText}}
-    {{/side-menu-link-to}}
-  </li>
 </ul>
 
 {{yield}}

@@ -1,18 +1,17 @@
 {{!-- NOTE: Not sure why this integration test is failing...More research required --}}
+{{!-- NOTE: Sidebar is borrowed from : https://bootstrapious.com/p/bootstrap-sidebar --}}
 
-{{#side-menu}}
-  <header class="navbar navbar-default">
-    <div class="navbar-header">
-      <h2>{{sidebarHeader}}</h2>
-      {{#side-menu-toggle}}
-        {{fa-icon "times"}}
-      {{/side-menu-toggle}}
-    </div>
-  </header>
+<nav id="sidebar" class="sidebar">
+  <CampgroundList @list={{list}} />
 
-  <CampgroundList @list={{list}} @buttonText="Add Campground" />
-{{/side-menu}}
-
-{{content-backdrop}}
+  <ul class="action">
+    <li>
+      {{#side-menu-link-to "add"}}
+      {{fa-icon "plus-square"}}
+      {{buttonText}}
+      {{/side-menu-link-to}}
+    </li>
+  </ul>
+</nav>
 
 {{yield}}

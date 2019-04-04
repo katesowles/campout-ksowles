@@ -1,9 +1,13 @@
 <SiteHeader @headerTitle="List O' Campgrounds" />
 
-<Sidebar @list={{this.model.list}} @sidebarHeader="Menu" />
+<div class="wrapper">
+  <Sidebar @list={{this.model.list}} @buttonText="Add Campground" />
+
+  <main>
+    <CampgroundDetail @campground={{this.model.detail}} @join=", "/>
+  </main>
+</div>
 
 {{!-- NOTE: The above solution is GROSS, I totally know this. BUT I can't seem to get the nested routing/outlet thingamajigger working. This is a research task for Future Kate. --}}
-
-<CampgroundDetail @campground={{this.model.detail}} @join=", "/>
 
 {{outlet}}

@@ -1,5 +1,10 @@
 <SiteHeader @headerTitle="List O' Campgrounds" />
 
-<Sidebar @list={{this.model.list}} @sidebarHeader="Menu" />
+<div class="wrapper">
+  <Sidebar @list={{this.model.list}} @buttonText="Add Campground" />
 
-{{outlet}}
+  <main>
+    <!-- <CampgroundDetail @campground={{this.model.detail}} @join=", "/> -->
+    {{outlet}}
+  </main>
+</div>
