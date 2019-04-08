@@ -112,7 +112,6 @@ export default function() {
   // GET list of campgrounds
   this.get('/campgrounds', (db, request) => {
     if (request.queryParams.id !== undefined) {
-      // console.log('right here');
       let filteredResults = campgrounds.filter((item) => {
         return item.id;
       });
