@@ -7,9 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('campgrounds', () => {
-      this.route('detail', { path: 'campgrounds/:campground_id' });
-  });
+  this.route('campgrounds');
   this.route('add', { path: 'campgrounds/add' });
 });
 
