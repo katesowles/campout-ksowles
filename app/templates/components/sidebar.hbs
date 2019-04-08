@@ -1,15 +1,14 @@
 {{!-- NOTE: Not sure why this integration test is failing...More research required --}}
 {{!-- NOTE: Sidebar is borrowed from : https://bootstrapious.com/p/bootstrap-sidebar --}}
-
-<nav id="sidebar" class="sidebar">
+<nav id="sidebar" class="sidebar {{if this.storageSvc.sidebarActive "active" ""}}">
   <CampgroundList @list={{list}} />
 
   <ul class="action">
     <li>
-      {{#side-menu-link-to "add"}}
+      {{#link-to "add"}}
       {{fa-icon "plus-square"}}
       {{buttonText}}
-      {{/side-menu-link-to}}
+      {{/link-to}}
     </li>
   </ul>
 </nav>

@@ -1,9 +1,9 @@
 <ul class="list">
   {{#each list as |campground|}}
     <li>
-      {{#side-menu-link-to "detail" campground.id}}
+      {{#link-to "campgrounds.show" campground.id}}
         {{campground.name}}
-      {{/side-menu-link-to}}
+      {{/link-to}}
     </li>
   {{/each}}
 </ul>

@@ -1,10 +1,9 @@
 <SiteHeader @headerTitle="List O' Campgrounds" />
 
 <div class="wrapper">
-  <Sidebar @list={{this.model.list}} @buttonText="Add Campground" />
+  <Sidebar @list={{this.model}} @buttonText="Add Campground" />
 
-  <main>
-    <!-- <CampgroundDetail @campground={{this.model.detail}} @join=", "/> -->
+  <main class="d-flex w-100 justify-content-between align-items-center">
     {{outlet}}
   </main>
 </div>
