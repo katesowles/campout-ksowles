@@ -1,8 +1,10 @@
 import Service from '@ember/service';
+import { get, set } from '@ember/object';
 
 export default Service.extend({
   items: null,
   starters: null,
+  sidebarActive: false,
 
   init () {
     this._super(...arguments);
@@ -72,4 +74,10 @@ export default Service.extend({
     ])
     this.set('items', this.starters)
   },
+
+  toggleSidebar () {
+    const bool = get(this, 'sidebarActive') === true ? false : true;
+
+    set(this, 'sidebarActive', bool);
+  }
 });
