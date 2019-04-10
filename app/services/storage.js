@@ -12,5 +12,19 @@ export default Service.extend({
     const bool = get(this, 'sidebarActive') === true ? false : true;
 
     set(this, 'sidebarActive', bool);
+    this.storeToggleState();
+  },
+
+  storeToggleState () {
+    const state = get(this, 'sidebarActive')
+    localStorage.setItem('toggleState', state);
+  },
+
+  storeFormData () {
+
+  },
+
+  clearLocalStorage () {
+    localStorage.clear();
   }
 });
