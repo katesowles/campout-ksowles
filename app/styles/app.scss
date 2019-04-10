@@ -64,6 +64,14 @@ a.active {
   bottom: 0;
 }
 
+///// SITE FOOTER STYLES ///////////////////////////////////////////////////////
+
+.site-footer__reset-button.site-footer__reset-button {
+  // position: -webkit-sticky;
+  // position: sticky;
+  // bottom: 2rem;
+}
+
 //// MEDIA QUERIES /////////////////////////////////////////////////////////////
 
 @media (max-width: 768px) {
