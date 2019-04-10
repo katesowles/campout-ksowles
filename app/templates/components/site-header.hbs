@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-  <button {{action "toggleSidebar"}} type="button" id="sidebarCollapse" class="btn btn-light sidebar-toggle">
+<nav class="site-header__navbar navbar navbar-expand-sm navbar-light bg-light py-3 px-2 border-0">
+  <button {{action "toggleSidebar"}} type="button" id="sidebarCollapse" class="btn btn-light sidebar__toggle">
     {{fa-icon "bars"}}
   </button>
 
-  <div>
+  <div class="py-2">
     {{#link-to "index"}}
       {{fa-icon "campground"}}
       {{headerTitle}}

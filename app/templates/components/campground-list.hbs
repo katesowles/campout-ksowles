@@ -1,11 +1,9 @@
-<ul class="list">
-  {{#each list as |campground|}}
-    <li>
-      {{#link-to "campgrounds.show" campground.id}}
-        {{campground.name}}
-      {{/link-to}}
-    </li>
-  {{/each}}
-</ul>
+{{#each list as |campground|}}
+  <li class="sidebar__list-item d-block">
+    {{#link-to "campgrounds.show" campground.id class="p-2 d-block"}}
+      {{campground.name}}
+    {{/link-to}}
+  </li>
+{{/each}}
 
 {{yield}}
