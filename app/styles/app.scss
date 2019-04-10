@@ -82,6 +82,14 @@ a.active {
   .sidebar--inactive {
     margin-left: -250px;
   }
+
+  .form__add {
+    display: block;
+  }
+
+  .modal.show, .modal-backdrop.show {
+    display: none !important;
+  }
 }
 
 @media (min-width: 769px) {
@@ -91,5 +99,13 @@ a.active {
 
   .sidebar__toggle {
     display: none;
+  }
+
+  .form__add {
+    display: none;
+  }
+
+  .modal.show, .modal-backdrop.show {
+    display: block !important;
   }
 }

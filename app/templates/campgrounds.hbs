@@ -3,7 +3,7 @@
 <div class="wrapper d-flex w-100 align-items-stretch">
   <Sidebar @list={{this.model}} @buttonText="Add Campground" class="d-flex" />
 
-  <main class="d-flex w-100 justify-content-between align-items-center">
+  <main class="d-flex flex-column w-100 justify-content-around align-items-center">
     {{outlet}}
 
     <SiteFooter @buttonText="Reset State" />

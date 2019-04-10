@@ -5,6 +5,6 @@ export default Route.extend({
   storageSvc: service('storage'),
 
   model () {
-    //
+    return ''
   }
 });

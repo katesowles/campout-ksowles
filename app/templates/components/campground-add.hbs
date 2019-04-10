@@ -1,8 +1,14 @@
-<h2>{{headerTitle}}</h2>
+<div id="formInline" class="form__add">
+  <h2>{{headerTitle}}</h2>
 
-<!-- {{#bs-form formLayout=formLayout model=this.model.campground onSubmit=(action "submitCreate" this.model.campground) as |form|}}
-  {{form.element controlType="text" value="" label=nameLabel placeholder="Silver Falls State Park" property="text" required=true}}
-  {{bs-button defaultText=buttonText type="primary" buttonType="submit"}}
-{{/bs-form}} -->
+  <div class="input-group mb-3">
+    <!-- {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" required=true class="form-control"}} -->
+    {{yield}} <!-- yields to form field -->
 
-{{yield}}
+    <div class="input-group-append">
+      <button {{action "updateModel" this.model}} class="btn btn-primary" type="button">
+        {{buttonText}}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,18 @@
-<SiteHeader @headerTitle="List O' Campgrounds" />
+<!-- <SiteHeader @headerTitle="List O' Campgrounds" />
 
-<Sidebar @list={{this.model.list}} @buttonText="Add Campground"/>
+<div class="wrapper d-flex w-100 align-items-stretch">
+  <Sidebar @list={{this.model}} @buttonText="Add Campground" class="d-flex" />
 
-{{!-- NOTE: bring back when Add is a modal, figure out the data store so that I don't have to pass active detail data into the Add component! <CampgroundDetail @campground={{this.model.detail}} @join=", " /> --}}
+  <main class="d-flex flex-column w-100 justify-content-around align-items-center">
+    {{outlet}} -->
+    <CampgroundAdd @model={{this.model}} @headerTitle="Add New Campground" @nameLabel="Name" @buttonText="Submit">
+      {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" required=true class="form-control"}}
+    </CampgroundAdd>
 
-{{!-- NOTE: The above solution is GROSS, I totally know this. BUT I can't seem to get the nested routing/outlet thingamajigger working. This is a research task for Future Kate. --}}
+    <Modal @model={{this.model}} @headerTitle="Add New Campground" @nameLabel="Name" @buttonText="Submit">
+      {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" required=true class="form-control"}}
+    </Modal>
 
-<CampgroundAdd @campground={{this.model.campground}} @headerTitle="Add New Campground" @nameLabel="Name" @cityLabel="City" @stateLabel="State" @buttonText="Submit" />
-
-{{outlet}}
+    <!-- <SiteFooter @buttonText="Reset State" />
+  </main>
+</div> -->
