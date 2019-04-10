@@ -31,82 +31,29 @@ export default function() {
       type: "campground",
       attributes: {
           name: "Beaver Bay Campground",
-          city: "Cougar",
-          state: "WA"
       }
-    }, {
+    },
+    {
       id: 2,
       type: "campground",
       attributes: {
         name: "Cape Lookout State Park",
-        city: "Tillamook",
-        state: "OR"
       }
-    }, {
+    },
+    {
       id: 3,
       type: "campground",
       attributes: {
         name: "Cove Palisades State Park",
-        city: "Culver",
-        state: "OR"
       }
-    }, {
+    },
+    {
       id: 4,
       type: "campground",
       attributes: {
-        name: "Crescent Lake Campground",
-        city: "Crescent",
-        state: "OR"
-      }
-    }, {
-      id: 5,
-      type: "campground",
-      attributes: {
-        name: "Deschutes River State Recreation Area",
-        city: "Wasco",
-        state: "OR"
-      }
-    }, {
-      id: 6,
-      type: "campground",
-      attributes: {
-          name: "Detroit Lake State Recreation Area",
-          city: "Detroit",
-          state: "OR"
-      }
-    }, {
-      id: 7,
-      type: "campground",
-      attributes: {
-          name: "Devil's Lake State Recreation Area",
-          city: "Lincoln City",
-          state: "OR"
-      }
-    }, {
-      id: 8,
-      type: "campground",
-      attributes: {
         name: "Fort Stevens State Park",
-        city: "Hammond",
-        state: "OR"
       }
-    }, {
-      id: 9,
-      type: "campground",
-      attributes: {
-        name: "South Beach State Park",
-        city: "Newport",
-        state: "OR"
-      }
-    }, {
-      id: 10,
-      type: "campground",
-      attributes: {
-        name: "Timothy Lake Campground",
-        city: "Clackamas County",
-        state: "OR"
-      }
-    }
+    },
   ]
 
   // GET list of campgrounds
