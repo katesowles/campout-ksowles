@@ -41,8 +41,29 @@ export default Service.extend({
     localStorage.setItem('sidebarShow', bool);
   },
 
+  getFormData () {
+    return localStorage.getItem('formData') || '';
+  },
+
   storeFormData (text) {
     localStorage.setItem('formData', text);
+  },
+
+  clearFormData () {
+    localStorage.removeItem('formData');
+  },
+
+  storeUpdatedData (data) {
+    const localDb = localStorage.getItem('localDb');
+
+    if (localDb) {
+      const parsedDb = JSON.parse(localDb);
+      parsedDb.push(data);
+      localStorage.setItem('localDb', JSON.stringify(parsedDb));
+    } else {
+      const newData = [ data ];
+      localStorage.setItem('localDb', JSON.stringify(newData));
+    }
   },
 
   clearLocalStorage () {

@@ -10,6 +10,9 @@ export default Component.extend({
   },
 
   didRender () {
-    $('#formModal').modal('show')
+    $('#formModal').modal({
+      backdrop: 'static',
+      show: true,
+    })
   }
 });

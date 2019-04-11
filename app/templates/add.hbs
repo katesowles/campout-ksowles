@@ -6,12 +6,12 @@
   <Sidebar @list={{this.model.list}} @buttonText="Add Campground" class="d-flex" />
 
   <main class="d-flex flex-column w-100 justify-content-around align-items-center">
-    <InlineForm @headerTitle="Add New Campground" >
-      <CampgroundAdd @model={{this.model.form}} @nameLabel="Name" @buttonText="Submit" />
+    <InlineForm @headerTitle="Add Campground" >
+      <CampgroundAdd @model={{this.model.form}} @submit={{action "submitCreate"}} @nameLabel="Name" @buttonText="Submit" />
     </InlineForm>
 
-    <Modal @headerTitle="Add New Campground" @close={{action "closeModal"}}>
-      <CampgroundAdd @model={{this.model.form}} @nameLabel="Name" @buttonText="Submit" />
+    <Modal @headerTitle="Add Campground" @close={{action "goHome"}}>
+      <CampgroundAdd @model={{this.model.form}} @submit={{action "submitCreate"}} @nameLabel="Name" @buttonText="Submit" />
     </Modal>
 
     <SiteFooter @buttonText="Reset State" />

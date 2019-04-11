@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-
+import $ from 'jquery';
 
 export default Component.extend({
   storageSvc: service('storage'),
@@ -10,9 +10,11 @@ export default Component.extend({
       this.storageSvc.storeFormData(body);
     },
 
-    submitCreate (body) {
-      alert('body: ' + body);
-      alert('model: ' + this.model);
+    submitForm (body) {
+      this.storageSvc.clearFormData();
+      $('#formModal').modal('hide');
+
+      this.submit(body);
     }
   }
 });

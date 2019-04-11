@@ -1,9 +1,13 @@
-<div class="input-group">
-  {{input key-up=(action "updateModel") value=this.model name=nameLabel placeholder="Deschutes River State Recreation Area" aria-describedby="campgroundName" class="form-control" required=true autofocus=true}}
+<form method="post">
+  <div class="input-group">
+    {{input key-up=(action "updateModel") value=this.model name=nameLabel placeholder="Deschutes River State Recreation Area" aria-describedby="campgroundName" class="form-control" required=true autofocus=true}}
 
-  <div class="input-group-append">
-    <button {{action "updateModel" this.model}} class="btn btn-primary" type="button">
-      {{buttonText}}
-    </button>
+    <div class="input-group-append">
+      <button {{action "submitForm" this.model}} class="btn btn-primary" type="submit">
+        {{buttonText}}
+      </button>
+    </div>
   </div>
-</div>
+</form>
+
+{{yield}}
