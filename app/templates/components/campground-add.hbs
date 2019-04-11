@@ -1,5 +1,5 @@
 <div class="input-group">
-  {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" aria-describedby="campgroundName" class="form-control" required=true autofocus=true}}
+  {{input key-up=(action "updateModel") value=this.model name=nameLabel placeholder="Deschutes River State Recreation Area" aria-describedby="campgroundName" class="form-control" required=true autofocus=true}}
 
   <div class="input-group-append">
     <button {{action "updateModel" this.model}} class="btn btn-primary" type="button">

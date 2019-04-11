@@ -6,7 +6,7 @@ export default Route.extend({
 
   model () {
     return {
-      form: '',
+      form: localStorage.getItem('formData') || '',
       list: this.store.findAll('campground'),
     }
   }

@@ -22,6 +22,8 @@ export default Service.extend({
 
   storeFormData () {
 
+  storeFormData (text) {
+    localStorage.setItem('formData', text);
   },
 
   clearLocalStorage () {

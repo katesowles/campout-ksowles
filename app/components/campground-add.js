@@ -1,9 +1,13 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+
 
 export default Component.extend({
+  storageSvc: service('storage'),
+
   actions: {
     updateModel (body) {
-      alert('inline here: ' + body)
+      this.storageSvc.storeFormData(body);
     },
 
     submitCreate (body) {
