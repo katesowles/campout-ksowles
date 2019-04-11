@@ -3,9 +3,14 @@ import { get, set } from '@ember/object';
 
 export default Service.extend({
   sidebarActive: false,
+  isInAddRoute: false,
 
   init () {
     this._super(...arguments);
+  },
+
+  updateAddRouteFlag (bool) {
+    set(this, 'isInAddRoute', bool);
   },
 
   toggleSidebar () {

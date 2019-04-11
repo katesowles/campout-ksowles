@@ -1,7 +1,8 @@
 {{!-- NOTE: Not sure why this integration test is failing...More research required --}}
 {{!-- NOTE: Sidebar is borrowed from : https://bootstrapious.com/p/bootstrap-sidebar --}}
 
-<nav id="sidebar" class="sidebar {{if this.storageSvc.sidebarActive "sidebar--active" "sidebar--inactive"}}">
+
+<nav id="sidebar" class="sidebar {{if this.storageSvc.sidebarActive "sidebar--active" "sidebar--inactive"}} {{if this.storageSvc.isInAddRoute "sidebar--hide"}}">
   <ul class="m-0 p-0 d-block h-100 d-flex align-items-stretch flex-column">
     <CampgroundList @list={{list}} />
 

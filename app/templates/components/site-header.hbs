@@ -1,5 +1,5 @@
 <nav class="site-header__navbar navbar navbar-expand-sm navbar-light bg-light py-3 px-2 border-0">
-  <button {{action "toggleSidebar"}} type="button" id="sidebarCollapse" class="btn btn-light sidebar__toggle">
+  <button {{action "toggleSidebar"}} type="button" id="sidebarCollapse" class="btn btn-light sidebar__toggle {{if this.storageSvc.isInAddRoute "sidebar__toggle--hide"}}">
     {{fa-icon "bars"}}
   </button>
 

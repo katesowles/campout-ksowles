@@ -75,6 +75,10 @@ a.active {
     margin-left: -250px;
   }
 
+  .sidebar--hide, .sidebar__toggle--hide {
+    display: none;
+  }
+
   .form__add {
     display: block;
   }
