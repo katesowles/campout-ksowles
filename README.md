@@ -26,6 +26,7 @@
 1. Dive into understanding the `{{yield}}` tag in more depth
 1. Read about Ember anti-patterns, and plan related refactors
 1. Re-enable the modal backdrop's ability to close the modal and change the view
+1. Ember Inspector!?
 1. Read more Ember docs and tutorials, because why not?
 
 ---
