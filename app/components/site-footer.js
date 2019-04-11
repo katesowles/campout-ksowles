@@ -7,6 +7,7 @@ export default Component.extend({
   actions: {
     resetLocalStorage () {
       this.storageSvc.clearLocalStorage();
+      window.location.reload(true);
     }
   }
 });
