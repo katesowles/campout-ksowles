@@ -24,52 +24,12 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.4.x/shorthands/
   */
 
-  // seed data
-  let campgrounds = [
-    {
-      id: 1,
-      type: "campground",
-      attributes: {
-          name: "Beaver Bay Campground",
-      }
-    },
-    {
-      id: 2,
-      type: "campground",
-      attributes: {
-        name: "Cape Lookout State Park",
-      }
-    },
-    {
-      id: 3,
-      type: "campground",
-      attributes: {
-        name: "Cove Palisades State Park",
-      }
-    },
-    {
-      id: 4,
-      type: "campground",
-      attributes: {
-        name: "Fort Stevens State Park",
-      }
-    },
-  ]
+  // return list of campgrounds
+  this.get('/campgrounds');
 
-  // GET list of campgrounds
-  this.get('/campgrounds', (db, request) => {
-    if (request.queryParams.id !== undefined) {
-      let filteredResults = campgrounds.filter((item) => {
-        return item.id;
-      });
-      return { data: filteredResults };
-    } else {
-      return { data: campgrounds };
-    }
-  });
+  // return specific campground
+  this.get('/campgrounds/:id')
 
-  // GET specific campground
-  this.get('/campgrounds/:id', function (db, request) {
-    return { data: campgrounds.find((item) => parseInt(request.params.id) === item.id) };
-  });
+  // create new campground
+  this.post('/campgrounds')
 }
