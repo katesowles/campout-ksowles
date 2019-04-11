@@ -33,6 +33,10 @@ export default Service.extend({
     this.storeSidebarState(bool.toString());
   },
 
+  getSidebarState () {
+    return localStorage.getItem('sidebarShow');
+  },
+
   setSidebarState (bool) {
     set(this, 'sidebarActive', bool);
   },

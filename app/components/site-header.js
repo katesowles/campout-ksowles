@@ -11,7 +11,7 @@ export default Component.extend({
   },
 
   didRender () {
-    const state = localStorage.getItem('sidebarShow');
+    const state = this.storageSvc.getSidebarState();
     const stateIsDefined = state !== undefined && state !== null;
     const normalizedState = this.storageSvc.normalizeBoolean(state);
 
