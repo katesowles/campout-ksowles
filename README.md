@@ -1,5 +1,7 @@
 # **dyrt-ksowles**
 
+## [Project Instructions](https://github.com/katesowles/dyrt-ksowles/blob/master/Instructions.pdf)
+
 ## App Quick-Run Instructions
 
 1. See the "Prerequisites" section below and confirm that your system meets those requirements.
