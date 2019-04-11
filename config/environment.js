@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'dyrt-ksowles',
+    modulePrefix: 'campout-ksowles',
     environment,
     rootURL: '/',
     locationType: 'auto',

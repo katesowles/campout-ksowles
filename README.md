@@ -1,6 +1,6 @@
-# **dyrt-ksowles**
+# **campout-ksowles**
 
-## [Project Instructions](https://github.com/katesowles/dyrt-ksowles/blob/master/Instructions.pdf)
+## [Project Instructions](https://github.com/katesowles/campout-ksowles/blob/master/Instructions.pdf)
 
 ## App Quick-Run Instructions
 
@@ -8,7 +8,7 @@
 1. Clone the repository by clicking the green "Clone or Download" button, and copy the link provided in the dropdown.
 1. In your Terminal, navigate via `cd` commands to a suitable directory for installing the repository.
 1. Once you've found your preferred directory, type the command `git clone [link from the Step 2]` in the Terminal, then click enter.
-1. Run command `cd dyrt-ksowles` in the Terminal to navigate into the repo root.
+1. Run command `cd campout-ksowles` in the Terminal to navigate into the repo root.
 1. From there, type command `ember serve` in the Terminal, then click enter.
 1. Open a new window or tab in Google Chrome and open the following URL: [http://localhost:4200](http://localhost:4200).
 1. To confirm that a development build works, in a new Terminal window/tab, run `ember build`.
@@ -71,7 +71,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ###### Running Tests
 
 * `ember test`
-* `ember test --server`
+* `ember test --server` (NOTE: Currently unused)
 
 ###### Linting
 
@@ -83,10 +83,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-###### Deploying
-
-Specify what it takes to deploy your app.
 
 ### Further Reading / Useful Links
 
