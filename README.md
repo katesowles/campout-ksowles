@@ -16,6 +16,8 @@
 
 ## Further Improvements:
 
+1. Handle empty GET /campgrounds
+1. Handle invalid GET/campgrounds/:id
 1. Form validation
 1. Data normalization
 1. Error handling
