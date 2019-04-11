@@ -5,6 +5,9 @@ export default Route.extend({
   storageSvc: service('storage'),
 
   model () {
-    return ''
+    return {
+      form: '',
+      list: this.store.findAll('campground'),
+    }
   }
 });

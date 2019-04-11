@@ -1,18 +1,19 @@
-<!-- <SiteHeader @headerTitle="List O' Campgrounds" />
+{{!-- NOTE: this duplication of site header, wrapper, sidebar, and site footer feels gross. figure out a solution and refactor! --}}
+
+<SiteHeader @headerTitle="List O' Campgrounds" />
 
 <div class="wrapper d-flex w-100 align-items-stretch">
-  <Sidebar @list={{this.model}} @buttonText="Add Campground" class="d-flex" />
+  <Sidebar @list={{this.model.list}} @buttonText="Add Campground" class="d-flex" />
 
   <main class="d-flex flex-column w-100 justify-content-around align-items-center">
-    {{outlet}} -->
-    <CampgroundAdd @model={{this.model}} @headerTitle="Add New Campground" @nameLabel="Name" @buttonText="Submit">
-      {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" required=true class="form-control"}}
-    </CampgroundAdd>
+    <InlineForm @headerTitle="Add New Campground" >
+      <CampgroundAdd @model={{this.model.form}} @nameLabel="Name" @buttonText="Submit" />
+    </InlineForm>
 
-    <Modal @model={{this.model}} @headerTitle="Add New Campground" @nameLabel="Name" @buttonText="Submit">
-      {{input name=nameLabel value=this.model placeholder="Deschutes River State Recreation Area" required=true class="form-control"}}
+    <Modal @headerTitle="Add New Campground" @close={{action "closeModal"}}>
+      <CampgroundAdd @model={{this.model.form}} @nameLabel="Name" @buttonText="Submit" />
     </Modal>
 
-    <!-- <SiteFooter @buttonText="Reset State" />
+    <SiteFooter @buttonText="Reset State" />
   </main>
-</div> -->
+</div>

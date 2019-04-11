@@ -5,17 +5,7 @@ export default Component.extend({
   actions: {
     closeModal () {
       $('#formModal').modal('hide');
-      // this.transitionTo('campgrounds')
-      // figure out how to trigger this from component, where router isn't accessible... maybe controller?
-    },
-
-    updateModel (body) {
-      alert('modal here: ' + body)
-    },
-
-    submitCreate (body) {
-      alert('body: ' + body);
-      alert('model: ' + this.model);
+      this.close(); // passed in from Add route view, executed in the Add controller
     }
   },
 
