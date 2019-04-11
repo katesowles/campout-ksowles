@@ -9,18 +9,37 @@ export default Service.extend({
   },
 
   toggleSidebar () {
-    const bool = get(this, 'sidebarActive') === true ? false : true;
+    let bool, normalizedReversedState;
+    const state = localStorage.getItem('sidebarShow')
+    const stateIsDefined = state !== undefined && state !== null;
 
+    switch (stateIsDefined) {
+      case true:
+        normalizedReversedState = !this.normalizeBoolean(state);
+        this.updateSidebarState(normalizedReversedState);
+        break;
+      default:
+        bool = !get(this, 'sidebarActive'); // reverse the current condition of sidebarActive
+        this.updateSidebarState(bool);
+    }
+  },
+
+  normalizeBoolean (value) {
+    return value === 'true' ? true : false;
+  },
+
+  updateSidebarState (bool) {
+    this.setSidebarState(bool);
+    this.storeSidebarState(bool.toString());
+  },
+
+  setSidebarState (bool) {
     set(this, 'sidebarActive', bool);
-    this.storeToggleState();
   },
 
-  storeToggleState () {
-    const state = get(this, 'sidebarActive')
-    localStorage.setItem('toggleState', state);
+  storeSidebarState (bool) {
+    localStorage.setItem('sidebarShow', bool);
   },
-
-  storeFormData () {
 
   storeFormData (text) {
     localStorage.setItem('formData', text);

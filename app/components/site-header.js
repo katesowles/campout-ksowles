@@ -8,5 +8,15 @@ export default Component.extend({
     toggleSidebar () {
       this.storageSvc.toggleSidebar();
     }
+  },
+
+  didRender () {
+    const state = localStorage.getItem('sidebarShow');
+    const stateIsDefined = state !== undefined && state !== null;
+    const normalizedState = this.storageSvc.normalizeBoolean(state);
+
+    if (stateIsDefined) {
+      this.storageSvc.setSidebarState(normalizedState);
+    }
   }
 });
