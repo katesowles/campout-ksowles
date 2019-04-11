@@ -58,18 +58,10 @@ a.active {
 
 .sidebar__list-item--add.sidebar__list-item--add {
   border: 0;
-  // NOTE: for whatever reason, bootstrap'S sticky-bottom isn't working the same as the three lines below. future research item.
+  // NOTE: for whatever reason, bootstrap's sticky-bottom isn't working the same as the three lines below. future research item.
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-}
-
-///// SITE FOOTER STYLES ///////////////////////////////////////////////////////
-
-.site-footer__reset-button.site-footer__reset-button {
-  // position: -webkit-sticky;
-  // position: sticky;
-  // bottom: 2rem;
 }
 
 //// MEDIA QUERIES /////////////////////////////////////////////////////////////
