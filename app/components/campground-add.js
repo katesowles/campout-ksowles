@@ -19,12 +19,10 @@ export default Component.extend({
   },
 
   didRender () {
-    console.log('true');
     this.storageSvc.updateAddRouteFlag(true); // specifically for Add route in mobile-size view
   },
 
   willClearRender () {
-    console.log('false');
     this.storageSvc.updateAddRouteFlag(false); // specifically for Add route in mobile-size view
   }
 });
