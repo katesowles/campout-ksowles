@@ -10,7 +10,12 @@
 1. Once you've found your preferred directory, type the command `git clone [link from the Step 2]` in the Terminal, then click enter.
 1. Run command `cd dyrt-ksowles` in the Terminal to navigate into the repo root.
 1. From there, type command `ember serve` in the Terminal, then click enter.
-1. Open a new window or tab in Google Chrome and open the following URL: [http://localhost:4200](http://localhost:4200)
+1. Open a new window or tab in Google Chrome and open the following URL: [http://localhost:4200](http://localhost:4200).
+1. To confirm that a development build works, in a new Terminal window/tab, run `ember build`.
+1. To confirm that a production build works, in a new Terminal window/tab, run `ember build --environment production`.
+1. To confirm that all linting passes, in a new Terminal window/tab, run `npm run lint:hbs && npm run lint:js`.
+1. To confirm that all tests pass (NOTE: right now there are two tests failing, requires more research, run `npm run test`).
+1. To confirm that there are no medium or high severity vulnerabilities in the NPM packages used for this project, in a new Terminal window/tab, run `npm audit`
 
 ---
 
